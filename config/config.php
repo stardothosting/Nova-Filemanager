@@ -9,7 +9,6 @@ return [
     | This is the storage disk FileManager will use to put file uploads, you can use
     | any of the disks defined in your config/filesystems.php file. Default to public.
      */
-
     'disk'      => env('FILEMANAGER_DISK', 'public'),
 
     /*
@@ -19,7 +18,6 @@ return [
     | This will set the default order of the files and folders.
     | You can use mime, name or size. Default to mime
      */
-
     'order'     => env('FILEMANAGER_ORDER', 'mime'),
 
     /*
@@ -27,9 +25,8 @@ return [
     | Filemanager default order direction
     |--------------------------------------------------------------------------
     | This will set the default order direction of the files and folders.
-    | You can use mime, name or size. Default to asc
+    | You can use asc or desc. Default to asc
      */
-
     'direction' => env('FILEMANAGER_DIRECTION', 'asc'),
 
     /*
@@ -40,14 +37,14 @@ return [
     | info. This is useful when s3 is being used or when needs to read a lot of files.
     | Cache is set by file, not by folder. Default to false.
      */
-
     'cache'     => env('FILEMANAGER_CACHE', false),
 
     /*
     |--------------------------------------------------------------------------
     | Filemanager  filters
     |--------------------------------------------------------------------------
-    | This option let you to filter your files by extensions. You can create|modify|delete as you want.
+    | This option let you to filter your files by extensions.
+    | You can create|modify|delete as you want.
      */
 
     'filters'   => [
@@ -68,20 +65,18 @@ return [
     |--------------------------------------------------------------------------
     | Filemanager  default filter
     |--------------------------------------------------------------------------
-    | This will set the default filter for all your Filemanager. You shoulw use one
+    | This will set the default filter for all your Filemanager. You should use one
     | of the keys used in filters in lowercase. If you have a key called Documents,
     | use 'documents' as your default filter. Default to false
      */
-
     'filter'    => false,
 
     /*
     |--------------------------------------------------------------------------
     | Naming strategy
     |--------------------------------------------------------------------------
-    | Resolve the upload file name with a class that extends Infinety\Filemanager\Http\Services\AbstractNamingStrategy
-    |
+    | Resolve the upload file name with a class that extends
+    | Infinety\Filemanager\Http\Services\AbstractNamingStrategy
      */
-
     'naming'    => Infinety\Filemanager\Http\Services\DefaultNamingStrategy::class,
 ];
